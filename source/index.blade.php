@@ -15,15 +15,15 @@
       <div class="row wrapper no-valign-wrap-on-mobile">
         <div class="col s12 l19 desktop">
           <h1 class="project_title text-center" style="margin-top:8.5rem;">
-          {{$page->title}} - title
+           title
         </h1>
         <div class="project_text text-center mt-6">
-          {{$page->desc}} - desc
+          - desc
         </div>
         <p>
           <br>
           <div class="wrapperwork">
-            <div class="featured-image center-oldclass" style="background:{{$page->maincolor}}">
+            <div class="featured-image center-oldclass">
               <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10 col-lg-8">
                   <div class="browser">
@@ -32,7 +32,7 @@
                         <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
                       </ul>
                     </div>
-                    <img class="img-fluid" src="img/froendesktop.png" alt="{{$page->title}} Website" style="border:1px solid #eaedf2;">
+                    <img class="img-fluid" src="img/froendesktop.png" alt="Website" style="border:1px solid #eaedf2;">
                   </div>
 
                   <h1 class="project_title text-center" style="margin-top:12.5rem;">
