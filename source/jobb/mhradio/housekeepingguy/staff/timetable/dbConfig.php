@@ -1,5 +1,0 @@
-<?
-
-include "../config.php";
-
-?>
