@@ -3,7 +3,7 @@
 @section('content')
 
 <main class="bg-blue-100 min-h-screen flex justify-center flex-col items-center">
-    <h1 class="font-light text-6xl text-blue-900 leading-none"><span class="font-medium">Hack</span><span class="italic">saw</span></h1>
+    <h1 class="font-light text-6xl text-blue-900 leading-none"><span class="font-medium">Hack</span><span class="italic">sawww</span></h1>
     <p class="text-blue-800 mt-2">Thank <em>f#&k</em> for the JAMstack</p>
     <ul class="flex flex-wrap justify-center items-center -mx-2 mt-6">
         @include('_partials.logo', [
