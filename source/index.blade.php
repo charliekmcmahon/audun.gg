@@ -1,30 +1,52 @@
 @extends('_layouts.master')
 
-@section('content')
+{{-- https://laravel.com/docs/5.4/blade#stacks --}}
+@push('head')
 
-<main class="bg-blue-100 min-h-screen flex justify-center flex-col items-center">
-    <h1 class="font-light text-6xl text-blue-900 leading-none"><span class="font-medium">Hack</span><span class="italic">sawww</span></h1>
-    <p class="text-blue-800 mt-2">Thank <em>f#&k</em> for the JAMstack</p>
-    <ul class="flex flex-wrap justify-center items-center -mx-2 mt-6">
-        @include('_partials.logo', [
-            'src' => '/assets/img/svg/tailwind.svg',
-            'href' => 'https://tailwindcss.com/docs/installation/',
-            'alt' => 'Tailwind',
-            'width' => 150
-        ])
-        @include('_partials.logo', [
-            'src' => '/assets/img/svg/jigsaw.svg',
-            'href' => 'https://jigsaw.tighten.co/docs/installation/',
-            'alt' => 'Jigsaw',
-            'width' => 40
-        ])
-        @include('_partials.logo', [
-            'src' => '/assets/img/svg/babel.svg',
-            'href' => 'https://babeljs.io/docs/en/',
-            'alt' => 'Babel',
-            'width' => 100
-        ])
-    </ul>
-</main>
+    @section('title', ' Audun Hilden')
+
+    {{-- https://laravel.com/docs/5.4/blade#template-inheritance --}}
+    @section('body')
+
+    @include('_partials.header-project')
+
+
+    <div class="center-div text-white">
+      <div class="row wrapper no-valign-wrap-on-mobile">
+        <div class="col s12 l19 desktop">
+          <h1 class="project_title text-center" style="margin-top:8.5rem;">
+          {{$page->title}} - title
+        </h1>
+        <div class="project_text text-center mt-6">
+          {{$page->desc}} - desc
+        </div>
+        <p>
+          <br>
+          <div class="wrapperwork">
+            <div class="featured-image center-oldclass" style="background:{{$page->maincolor}}">
+              <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10 col-lg-8">
+                  <div class="browser">
+                    <div class="header">
+                      <ul class="dots">
+                        <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                      </ul>
+                    </div>
+                    <img class="img-fluid" src="img/froendesktop.png" alt="{{$page->title}} Website" style="border:1px solid #eaedf2;">
+                  </div>
+
+                  <h1 class="project_title text-center" style="margin-top:12.5rem;">
+                    Services
+                  </h1>
+                  <div class="project_text text-center mt-6">
+                    Web-Design, Mobile Design, Email services, CMS, Responsive
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 @endsection
