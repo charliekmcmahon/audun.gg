@@ -8,7 +8,7 @@
     {{-- https://laravel.com/docs/5.4/blade#template-inheritance --}}
     @section('body')
 
-    @include('_partials.header-project')
+    <!-- @include('_partials.header-project') -->
 
 
     <div class="center-div text-white">
