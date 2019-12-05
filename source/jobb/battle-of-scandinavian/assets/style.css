@@ -1,0 +1,163 @@
+<style>
+.container{
+  max-width:940px;
+  margin-left:auto;
+  margin-right:auto;
+}
+img.logoNavbar{
+  width:64px !important;
+  vertical-align: middle;
+}
+body{
+  background-color: red;
+}
+.navbar-inverse .navbar-nav>li>a {
+  padding: 25px 20px;
+    color: white;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    background-color: #eb4d4b;
+}
+.nav{
+  color:white;
+}
+.navbar-inverse {
+    border: none;
+
+}
+.navbar {
+    min-height: 50px;
+    position: fixed;
+    background-color: rgb(84, 54, 72);
+    z-index:99;
+    margin-bottom: 0px !important;
+    border: 0 !important;
+}
+.navbar-inverse .navbar-toggle {
+     border: none !important;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: none;
+}
+.serverName{
+  color:white;
+  font-family: 'Varela Round', sans-serif;
+  font-size:19px;
+  font-weight:bold;
+}
+.lightpill{
+  border-radius:.2em;
+  padding:2px;
+  text-align: center;
+  display:inline-block;
+  color:white;
+}
+.server-info{
+  transform: translateY(-50px);
+  height:150px;
+  width:200px;
+  border-radius:.4em;
+  float:left;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right:30px !important;
+  background: #9e463b;
+  color:white;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 10px;
+}
+.server-info:hover{
+  transform: translatey(-55px);
+  cursor: pointer;
+}
+#online{
+  color:#803d34;
+}
+.wrappedIn{
+  margin-right:auto;
+  margin-left:auto;
+  width:690px
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    border-radius:0 !important;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+  }
+  .slogan{
+    font-family: 'Ubuntu', sans-serif;
+    font-size:16px;
+  }
+  .hero-caption{
+    z-index:101;
+    font-family: 'Varela Round', sans-serif;
+    color:white;
+    margin-top:15vh;
+    font-size:35px;
+  }
+.servers{
+  width:15%;
+  background-color: #9b391d;
+  margin-right:20px;
+}
+.column{
+  text-align: center;
+  float:left;
+}
+.btn-join{
+  display:inline-block;
+  padding: 10px 30px;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  border-radius:.3em;
+}
+.sectionTwo{
+  margin-top:50px;
+  max-width:940px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.title{
+  text-align:right;
+  font-size:24px;
+}
+.btn-join:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.hero{
+    padding: 15px;
+    color:white;
+    height:60vh;
+    background: url(http://audunhilden.net/jobb/battle-of-scandinavian/assets/rustHERO.PNG);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 50%;
+}
+.btn-join{
+
+}
+.container{
+  max-width:940px;
+  margin-left:auto;
+  margin-right:auto;
+}
+img.logoNavbar{
+  width:120px !important;
+  display:block;
+  margin-top:17px;
+  padding-right:20px;
+  margin-right:auto;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+</style>

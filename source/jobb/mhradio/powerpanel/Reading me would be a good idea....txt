@@ -1,0 +1,62 @@
+
+Thanks for downloading...                                                                                                                        
+                                                                                                                        
+   ......        .','..    ..      .     ... .........  .......                                                 .;. BETA 0.1      
+  'ONWNXKO:    .xNNKXNXo. .OWl    cO.   .OX:.0WWNNNNWl  xNNNNXKo.                                               OWl     
+  ,KNc.':kNl  cK0;....cK0, ,K0.  ;XWd.  lNo .KMx......  OWd..,lXO.  .. ....     ....     .  ....       ..'.     OWl     
+  ,KX,  .dWo 'NM:      oM0. ;Xx..KWXWo.cNO. .KMO:::'    OWd..'lXx. cNKlodOKo.  :dddxOl. 'O0dookKk.  .okxddxOd.  OWl     
+  ,KW0kkOOl. ;MW;      cMX.  dWxxWd;XNxXW:  .KM0ooo,    OMKONMNl   lWO    oWo  ,codxXWl ,KX,   cWx.'XMKlccoXMd  OWl     
+  ,KN:..     .KMl      kWd   'XMWd. :XMWd   .KMo        OWl ,kNk.  lWO    cWx.lWK;..OMd ,KX,   :Nk.;WM0c:::::'  OWl     
+  ,KX,        'xKxlcld00:.    cXO.   ;Xx.   .KM0ooooo'  OWl   ,0Kl.lWXoccxXk. lWKlcoKMk.,KX,   :Nk. c0Xxcclo'   kMx.    
+  .;;.          .:clc:,.       ,'     ,.     ;:::::::.  ,:.    .::.lWK:;:,.    .;:;'.;; .;;.   .:,    .,::;'.   .:;.    
+                                                                   lWO                                                  
+                                                                   .c;                                               
+                                                                                                                        
+                                                                                                                        
+This readme is best viewed in "Courier New" in full-screen mode.
+
+x____________________________________________________________________________________________________________________________x
+
+	Once again, thanks for downloading POWERpanel BETA 0.1! POWERpanel BETA 0.1 features quite a lot of cool tools
+	for you to use to run your Radio Website/Fansite.
+
+	This panel was almost completely made by Simon Fletcher (Invent! on Habbo UK), because of the fact that parts of
+	the code was made by other coders who released their source code for free, I feel it is only right for me to do
+	the same.
+	
+	So please, edit the code as you wish! All I ask is that you keep the disclaimers and the "POWERpanel brand name".
+
+	To install the panel first CHMOD the following files to 777 or 07777:
+	
+	'includes/sql.php'
+	'includes/config.php'
+	
+	Once you have done this open installer.php and go through the stages!
+
+
+	If you have any issues with the panel just contact me on HabboxForum.com (My username is: Invent) or contact me
+	on Habbo Hotel UK. My username on it is: Invent!
+
+
+	All the files you need for your listeners to use are located in the folder "frontend".
+
+
+	Once again for the final time, thanks for using the Panel!
+	---------------
+	Simon Fletcher
+	A.K.A Invent! on Habbo UK
+
+x____________________________________________________________________________________________________________________________x
+
+                                                                                                                        
+   ......        .','..    ..      .     ... .........  .......                                                 .;. BETA 0.1      
+  'ONWNXKO:    .xNNKXNXo. .OWl    cO.   .OX:.0WWNNNNWl  xNNNNXKo.                                               OWl     
+  ,KNc.':kNl  cK0;....cK0, ,K0.  ;XWd.  lNo .KMx......  OWd..,lXO.  .. ....     ....     .  ....       ..'.     OWl     
+  ,KX,  .dWo 'NM:      oM0. ;Xx..KWXWo.cNO. .KMO:::'    OWd..'lXx. cNKlodOKo.  :dddxOl. 'O0dookKk.  .okxddxOd.  OWl     
+  ,KW0kkOOl. ;MW;      cMX.  dWxxWd;XNxXW:  .KM0ooo,    OMKONMNl   lWO    oWo  ,codxXWl ,KX,   cWx.'XMKlccoXMd  OWl     
+  ,KN:..     .KMl      kWd   'XMWd. :XMWd   .KMo        OWl ,kNk.  lWO    cWx.lWK;..OMd ,KX,   :Nk.;WM0c:::::'  OWl     
+  ,KX,        'xKxlcld00:.    cXO.   ;Xx.   .KM0ooooo'  OWl   ,0Kl.lWXoccxXk. lWKlcoKMk.,KX,   :Nk. c0Xxcclo'   kMx.    
+  .;;.          .:clc:,.       ,'     ,.     ;:::::::.  ,:.    .::.lWK:;:,.    .;:;'.;; .;;.   .:,    .,::;'.   .:;.    
+                                                                   lWO                                                  
+                                                                   .c;                                               
+                                                                                                                        
