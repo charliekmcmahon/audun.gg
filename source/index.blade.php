@@ -236,7 +236,7 @@
                                   </span>
                                   <div style="clear:both";>&nbsp;</div>
                               </div>
-                            </div>
+                            </div> 
 
                             <div class="select">
                               <div id="text">
