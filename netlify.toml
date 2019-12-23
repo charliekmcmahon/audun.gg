@@ -1,5 +1,5 @@
 [build]
-  publish = "source/"
+  publish = "build_production/"
   command = "yarn production"
 
 [build.environment]
