@@ -1,6 +1,6 @@
 [build]
-  publish = "source/"
-  command = "yarn production"
+  publish = "build_production/"
+  command = "make"
 
 [build.environment]
   PHP_VERSION = "7.2"
