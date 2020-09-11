@@ -19,7 +19,7 @@
   <body class="bg-gray-300">
     <!-- alert-->
     <div
-      class="top-0 right-0 mr-6 mt-4 fixed z-50 bg-red-500 border-2 border-red-600 text-white text-md px-4 py-4 rounded-md shadow opacity-0 transition ease-in duration-200"
+      class="top-0 right-0 mr-6 mt-4 fixed z-50 bg-red-500 border-2 border-red-600 text-white text-md px-4 py-4 rounded-md shadow hidden transition ease-in duration-200"
       id="errorMsg"
     >
       <div class="flex items-center">
@@ -38,16 +38,16 @@
           </div>
 
           <div class="text-md font-semibold">
-            Baking av PCB - Does not have a price egroup : Se 'bug' for mer
+            Baking av PCB - Does not have a price group : Se 'bug' for mer
             informasjon.
           </div>
         </div>
       </div>
     </div>
     <!--  start navbar-->
-    <nav class="bg-gray-800">
+    <nav class="bg-gray-800 fixed w-full">
       <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-16">
+        <div class="relative flex items-center justify-between h-24">
           <div class="flex-1 flex items-center justify-center sm:justify-start">
             <div class="flex-shrink-0">
               <img
@@ -64,29 +64,81 @@
                   >Dashboard</a
                 >
                 <a
-                  href="index.html"
+                  href="#"
                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
-                  >Tilbake til Sidebar</a
-                >
+                  onClick="openTilbud()"
+                  >Tilbud <i class="fas fa-caret-down ml-3 text-lg"></i></a
+                ><a
+                  href="#"
+                  class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+                  onClick="openAdmin()"
+                  >Admin <i class="fas fa-caret-down ml-3 text-lg"></i
+                ></a>
                 <a
                   href="#"
                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
                   onClick="showError()"
                   >Kast en feilmelding!</a
                 >
+                <!-- menu for tilbud -->
+                <div
+                  class="absolute mt-12 ml-24 bg-white w-64 absolute rounded-lg py-2 px-2 shadow hidden"
+                  id="isOpenTilbud"
+                >
+                  <div
+                    class="w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                  >
+                    <i class="fas fa-plus mr-3"></i> Opprett tilbud
+                  </div>
+                  <div
+                    class="mt-2 w-full rounded-lg bg-gray-200 hover:bg-gray-500 cursor-pointer hover:text-white px-6 py-3"
+                  >
+                    <i class="fas fa-list mr-3"></i> Alle tilbud
+                  </div>
+                </div>
+                <!-- menu for admin -->
+                <div
+                  class="absolute mt-12 ml-24 bg-white w-64 absolute rounded-lg py-2 px-2 shadow hidden"
+                  id="isOpenAdmin"
+                >
+                  <div
+                    class="w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                  >
+                    <i class="fas fa-plus mr-3"></i> Kalkylemaler
+                  </div>
+                  <div
+                    class="mt-3 w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                  >
+                    <i class="fas fa-plus mr-3"></i> Prisgrupper
+                  </div>
+                  <div
+                    class="mt-3 w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                  >
+                    <i class="fas fa-plus mr-3"></i> Prislister
+                  </div>
+                  <div
+                    class="mt-3 w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                  >
+                    <i class="fas fa-plus mr-3"></i> Ny prisliste
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="ml-3 relative flex items-center">
             <div class="flex-1">
               <img
-                class="h-8 w-8 rounded-full mr-3"
+                class="h-10 w-10 rounded-full mr-3"
                 src="https://lh3.googleusercontent.com/2L-amEVRCk5-sQJiOzUFD_07geRE_R-NKhz5hbmRTgqEe3H5znt4YTIQb618pmtxZ8xs"
                 alt=""
               />
             </div>
 
-            <div class="flex-initial text-white">Stian Kraggerud</div>
+            <div class="flex-initial text-white">
+              Stian Kraggerud <br /><span class="text-gray-500 text-sm"
+                >Konsulent</span
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -95,7 +147,7 @@
         end sidebar
       -->
 
-    <div class="overflow-hidden">
+    <div class="overflow-hidden pt-24" onClick="closeAllMenus()">
       <div class="px-8 py-4 text-gray-700 bg-white">
         <div class="text-2xl font-thin">HEMS - Tilbud</div>
         <div class="text-sm font-thin">
