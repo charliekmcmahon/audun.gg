@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "passord"
+AuthUserFile /work/.htpasswd
+Require valid-user
