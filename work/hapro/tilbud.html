@@ -49,7 +49,7 @@
     <!--  start navbar-->
     <nav class="bg-gray-800 fixed w-full">
       <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="relative flex items-center justify-between h-24">
+        <div class="relative flex items-center justify-between h-16">
           <div class="flex-1 flex items-center justify-center sm:justify-start">
             <div class="flex-shrink-0">
               <img
@@ -130,13 +130,13 @@
           <div class="ml-3 relative flex items-center">
             <div class="flex-1">
               <img
-                class="h-10 w-10 rounded-full mr-3"
+                class="h-8 w-8 rounded-full mr-3"
                 src="https://lh3.googleusercontent.com/2L-amEVRCk5-sQJiOzUFD_07geRE_R-NKhz5hbmRTgqEe3H5znt4YTIQb618pmtxZ8xs"
                 alt=""
               />
             </div>
 
-            <div class="flex-initial text-white">
+            <div class="flex-initial text-white text-sm">
               Stian Kraggerud <br /><span class="text-gray-500 text-sm"
                 >Konsulent</span
               >
@@ -144,48 +144,79 @@
           </div>
         </div>
       </div>
-    </nav>
-    <!--  
-        end sidebar
-      -->
-    <div
-      class="bottom-0 right-0 fixed bg-green-500 text-white flex px-6 py-4 mr-4 mb-4 rounded-lg hover:bg-green-600 cursor-pointer border-green-600 border-b-2"
-    >
-      <div class="flex items-center justify-center w-full">
-        <i class="fas fa-plus font-lg mr-3"></i> Notat
-      </div>
-    </div>
-    <div class="overflow-hidden pt-24" onClick="closeAllMenus()">
-      <div class="px-8 py-4 overflow-x-auto">
-        <div class="bg-white px-4 py-4 rounded-md shadow mb-4">
-          <div class="text-2xl font-thin">dolor sit Amet</div>
-          <div class="text-sm font-thin">
-            Dashboard <span class="mx-2 text-gray-400">/</span>Tilbud
-            <span class="mx-2 text-gray-400">/</span>
-            <span class="font-semibold">dolor sit Amet</span>
+      <div
+        class="bg-gray-900 bg-opacity-50 text-white max-w-7xl mx-auto px-8"
+        onClick="closeAllMenus()"
+      >
+        <div class="flex items-center h-16">
+          <div class="flex-1 flex items-center">
+            <div class="font-bold inline mr-6">dolor sit Amet</div>
+            <div class="text-sm font-thin inline">
+              <span class="text-opacity-50 cursor-pointer">Dashboard</span>
+              <span class="mx-2 text-gray-700">/</span
+              ><span class="text-opacity-50 cursor-pointer">Tilbud</span>
+              <span class="mx-2 text-gray-700">/</span>
+              <span class="font-semibold">dolor sit Amet</span>
+            </div>
           </div>
-        </div>
-        <!-- 
-          endring = 0
-        <div
-          class="w-full mb-4 inline-block shadow rounded-lg border-t-2 border-gray-200 bg-gray-100 text-left text-xs text-gray-600 text-left"
-        >
-          <div
-            class="font-semibold border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg text-gray-700 bg-white text-sm px-4 py-4"
-          >
-            Endringslogg
+
+          <div class="flex-inintial mr-3">
+            <div
+              class="w-10 h-10 bg-gray-900 text-center items-center flex justify-center rounded-full hover:bg-gray-800 cursor-pointer"
+            >
+              <i class="fas fa-calendar-alt text-xl text-gray-500"></i>
+            </div>
           </div>
-          <div class="flex py-2 px-5 rounded-bl-lg rounded-br-lg">
-            <div class="flex-1">
-              <div class="text-sm text-gray-600">Fant ingen endringer.</div>
+          <div class="flex-inintial">
+            <div
+              class="w-10 h-10 bg-gray-900 text-center items-center flex justify-center rounded-full hover:bg-gray-800 cursor-pointer"
+            >
+              <i
+                class="fas fa-bars transform rotate-90 text-xl text-gray-500"
+              ></i>
             </div>
           </div>
         </div>
-          end endring = 0
-        -->
+      </div>
+    </nav>
+
+    <!--  
+        end sidebar
+      -->
+
+    <div class="overflow-hidden pt-32" onClick="closeAllMenus()">
+      <div class="px-8 py-4 overflow-x-auto">
+        <!--  
+           gammel tittel / breadcrumb
+        <div class="bg-white px-4 py-4 rounded-md shadow mb-4">
+          <div class="flex items-center">
+            <div class="flex-1">
+              <div class="text-2xl font-thin">dolor sit Amet</div>
+              <div class="text-sm font-thin">
+                Dashboard <span class="mx-2 text-gray-400">/</span>Tilbud
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="font-semibold">dolor sit Amet</span>
+              </div>
+            </div>
+            <div class="flex-inintial">
+              <div
+                class="w-12 h-12 bg-gray-200 text-center items-center flex justify-center rounded-full hover:bg-gray-300 cursor-pointer"
+              >
+                <i
+                  class="fas fa-calendar-alt text-black text-2xl text-gray-700"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+           end gammel tittel / breadcrumb
+          -->
+
         <!-- 
           endring = 1
-        -->
         <div
           class="w-full mb-4 inline-block shadow rounded-lg bg-gray-100 text-left text-xs text-gray-600 text-left"
         >
@@ -214,18 +245,17 @@
             </div>
           </div>
         </div>
-        <!-- 
           end endring = 1
         -->
         <div class="lg:flex lg:space-x-10">
           <div
-            class="w-full lg:w-1/2 inline-block shadow rounded-lg border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 tracking-wider text-left"
+            class="w-full inline-block shadow rounded-lg bg-gray-100 text-left text-xs font-semibold text-gray-600 tracking-wider text-left"
           >
             <div
-              class="border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg text-gray-700 bg-white text-sm px-4 py-4"
+              class="border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg text-gray-700 bg-white text-sm px-5 py-4"
             >
               <div class="flex items-center">
-                <div class="flex-1">Tilbud</div>
+                <div class="flex-1">Tilbudsdetaljer</div>
                 <div class="flex-initial text-right font-regular">
                   <div
                     class="bg-blue-400 uppercase text-xs cursor-pointer hover:bg-blue-500 text-white px-3 py-1 rounded"
@@ -235,177 +265,172 @@
                 </div>
               </div>
             </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">Kunde</div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">Lorem Ipsum</div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Gyldig TOM
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">
-                  31.04.2018
-                  <span class="text-xs text-red-500"
-                    ><i class="fas fa-hourglass-start mx-3"></i>5d 12h 42m
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Tilbudsnummer
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">1001</div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Svarfrist
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">
-                  31.06.2018
-                  <span class="text-xs text-green-500"
-                    ><i class="fas fa-clock mx-3"></i>25d 12h 42m
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Risikovurdering
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">IN</div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">Valuta</div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">NOK</div>
-              </div>
-            </div>
-            <div
-              class="flex py-2 px-5 hover:bg-gray-200 rounded-bl-md rounded-br-md"
-            >
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Valutakurs
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">1.00</div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-full mt-6 lg:mt-0 lg:w-1/2 inline-block shadow rounded-lg border-b-2 border-t-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 tracking-wider text-left"
-          >
-            <div
-              class="border-b-2 border-gray-300 rounded-tl-lg rounded-tr-lg text-gray-700 bg-white text-sm px-4 py-4"
-            >
-              <div class="flex items-center">
-                <div class="flex-1">Detaljer</div>
-                <!-- 
-                 <div class="flex-initial mr-4">
-                  <div
-                    class="uppercase text-xs bg-green-400 cursor-pointer hover:bg-green-500 text-white px-3 py-1 rounded"
-                  >
-                    <i class="fas fa-plus mr-3 text-sm"></i> Nytt notat
+            <div class="flex">
+              <div class="w-1/3">
+                <div class="flex py-1 px-5 bg-gray-200 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Kunde
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">Lorem Ipsum</div>
                   </div>
                 </div>
-               -->
-                <div class="flex-initial text-right font-regular">
-                  <div
-                    class="bg-blue-400 uppercase text-xs cursor-pointer hover:bg-blue-500 text-white px-3 py-1 rounded"
-                  >
-                    <i class="fas fa-edit mr-3 text-sm"></i> Endre
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Ansvarlig marked
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">Audun Hilden</div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Ansvarlig Materialkost
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">Audun Hilden</div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Ansvarlig produksjonskost
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">Audun Hilden</div>
-              </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Materialkost frist
-                </div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">
-                  31.09.2019<span class="text-xs text-green-500"
-                    ><i class="fas fa-clock mx-3"></i>25d 12h 42m
-                  </span>
-                </div>
-              </div>
-            </div>
 
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">
-                  Produksjonskost frist
+                <div class="flex py-1 px-5 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Tilbudsnummer
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">1001</div>
+                  </div>
+                </div>
+
+                <div class="flex py-1 px-5 bg-gray-200 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Risikovurdering
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">IN</div>
+                  </div>
+                </div>
+                <div class="flex py-1 px-5 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Valuta
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">NOK</div>
+                  </div>
+                </div>
+                <div
+                  class="flex py-1 px-5 bg-gray-200 hover:bg-gray-300 rounded-bl-lg"
+                >
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Valutakurs
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">1.00</div>
+                  </div>
                 </div>
               </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">
-                  24.04.2020
-                  <span class="text-xs text-green-500"
-                    ><i class="fas fa-clock mx-3"></i>28d 12h 42m
-                  </span>
+              <div class="w-1/3 border-l-2 border-r-2 border-gray-300">
+                <div class="flex py-1 px-5 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Ansvarlig marked
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">Audun Hilden</div>
+                  </div>
+                </div>
+                <div class="flex py-1 px-5 bg-gray-200 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Ansvarlig Materialkost
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">Audun Hilden</div>
+                  </div>
+                </div>
+                <div class="flex py-1 px-5 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Ansvarlig produksjonskost
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">Audun Hilden</div>
+                  </div>
+                </div>
+
+                <div class="flex py-1 px-5 bg-gray-200 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Underlag
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flex py-1 px-5 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Notater
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">&nbsp;</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="flex py-2 px-5 hover:bg-gray-200">
-              <div class="flex-1">
-                <div class="text-sm text-gray-600 tracking-wider">Underlag</div>
-              </div>
-              <div class="flex-initial">
-                <div class="text-sm text-gray-600">&nbsp;</div>
+              <div class="w-1/3">
+                <div class="flex py-1 px-5 bg-gray-200 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Gyldig fra > til
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">
+                      31.04.2018
+                      <span class="text-xs text-blue-500"
+                        ><i class="fas fa-caret-right mx-3"></i>
+                      </span>
+                      31.04.2019
+                    </div>
+                  </div>
+                </div>
+                <div class="flex py-1 px-5 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Svarfrist
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">31.06.2018</div>
+                  </div>
+                </div>
+                <div class="flex py-1 px-5 bg-gray-200 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Materialkost frist
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">31.09.2019</div>
+                  </div>
+                </div>
+                <div class="flex py-1 px-5 hover:bg-gray-300">
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      Produksjonskost frist
+                    </div>
+                  </div>
+                  <div class="flex-initial">
+                    <div class="text-sm text-gray-600">24.04.2020</div>
+                  </div>
+                </div>
+                <div
+                  class="flex py-1 px-5 bg-gray-200 hover:bg-gray-300 rounded-br-lg"
+                >
+                  <div class="flex-1">
+                    <div class="text-sm text-gray-600 tracking-wider">
+                      &nbsp;
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

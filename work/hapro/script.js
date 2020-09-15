@@ -38,10 +38,16 @@ function throwError() {
     }
   }, 500);
 }*/
+const calculus = document.getElementById('newCalculus');
 
+function newCalculus() {
+  calculus.classList.toggle('hidden');
+}
+function closeCalculus() {
+  calculus.classList.add('hidden');
+}
 const admin = document.getElementById('isOpenAdmin');
 const tilbud = document.getElementById('isOpenTilbud');
-
 function openTilbud() {
   tilbud.classList.toggle('hidden');
   admin.classList.add('hidden');
