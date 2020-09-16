@@ -48,7 +48,7 @@
     </div>
 
     <!-- modal-->
-    <div class="fixed z-50 inset-0 overflow-y-auto hidden" id="newCalculus">
+    <div class="fixed z-50 inset-0 overflow-y-auto" id="newCalculus">
       <div
         class="flex items-end justify-center min-h-screen pb-20 text-center sm:block sm:p-0"
       >
@@ -60,7 +60,6 @@
         >&#8203;
         <div
           class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle w-1/2"
-          role="dialog"
         >
           <div class="bg-white px-6 py-6">
             <div class="mt-3 text-center sm:mt-0 sm:text-left">
@@ -86,7 +85,10 @@
                 />
                 <div class="text-sm leading-5 text-gray-500 w-full">
                   <div class="flex">
-                    <div class="w-1/2">Nåverende poster</div>
+                    <div class="w-1/2">
+                      Nåverende poster
+                      <div class="py-4 nåverende"></div>
+                    </div>
                     <div class="w-1/2">
                       Tilgjengelige poster
                       <input
@@ -94,7 +96,8 @@
                         placeholder="Søk etter post ..."
                       />
                       <div
-                        class="cursor-pointer border-l-2 border-r-2 border-t-2 rounded-tl-md rounded-tr-md border-gray-200 px-4 py-2 hover:bg-green-500 hover:text-white"
+                        class="cursor-pointer border-l-2 border-r-2 border-t-2 rounded-tl-md rounded-tr-md border-gray-200 px-4 py-2 hover:bg-green-500 hover:text-white block"
+                        onClick="moveMe()"
                       >
                         <i class="fas fa-plus mr-3 text-green-200"></i>Baking av
                         pizza
@@ -195,44 +198,45 @@
                 >
                 <!-- menu for tilbud -->
                 <div
-                  class="absolute mt-12 ml-24 bg-white w-64 absolute rounded-lg py-2 px-2 shadow hidden"
+                  class="absolute mt-12 ml-24 bg-white w-64 absolute rounded-lg shadow hidden"
                   id="isOpenTilbud"
                 >
                   <div
-                    class="w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                    class="w-full rounded-tl-md rounded-tr-md bg-white hover:bg-gray-200 border border-gray-300 cursor-pointer px-6 py-3"
                   >
-                    <i class="fas fa-plus mr-3"></i> Opprett tilbud
+                    <i class="fas fa-plus mr-3"></i>Opprett tilbud
                   </div>
                   <div
-                    class="mt-2 w-full rounded-lg bg-gray-200 hover:bg-gray-500 cursor-pointer hover:text-white px-6 py-3"
+                    class="w-full rounded-bl-md rounded-br-md bg-white hover:bg-gray-200 border-l border-r border-b border-gray-300 cursor-pointer px-6 py-3"
                   >
-                    <i class="fas fa-list mr-3"></i> Alle tilbud
+                    <i class="fas fa-list mr-3"></i>Alle tilbud
                   </div>
                 </div>
                 <!-- menu for admin -->
                 <div
-                  class="absolute mt-12 ml-24 bg-white w-64 absolute rounded-lg py-2 px-2 shadow hidden"
+                  class="absolute mt-12 ml-24 bg-white w-64 absolute rounded-lg shadow hidden"
                   id="isOpenAdmin"
                 >
                   <div
-                    class="w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                    class="w-full rounded-tl-md rounded-tr-md bg-white hover:bg-gray-200 border border-gray-300 cursor-pointer px-6 py-3"
                   >
-                    <i class="fas fa-plus mr-3"></i> Kalkylemaler
+                    <i class="fas fa-folder-plus mr-3"></i>Kalkylemaler
                   </div>
                   <div
-                    class="mt-3 w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                    class="w-full bg-white hover:bg-gray-200 border-l border-r border-b border-gray-300 cursor-pointer px-6 py-3"
                   >
-                    <i class="fas fa-plus mr-3"></i> Prisgrupper
+                    <i class="fas fa-money-check-alt mr-3"></i>Prisgrupper
+                  </div>
+
+                  <div
+                    class="w-full bg-white hover:bg-gray-200 border-l border-r border-gray-300 cursor-pointer px-6 py-3"
+                  >
+                    <i class="fas fa-money-check-alt mr-3"></i>Ny prisliste
                   </div>
                   <div
-                    class="mt-3 w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
+                    class="w-full rounded-bl-md rounded-br-md bg-white hover:bg-gray-200 border border-gray-300 cursor-pointer px-6 py-3"
                   >
-                    <i class="fas fa-plus mr-3"></i> Prislister
-                  </div>
-                  <div
-                    class="mt-3 w-full rounded-lg bg-gray-200 hover:bg-green-500 cursor-pointer hover:text-white px-6 py-3"
-                  >
-                    <i class="fas fa-plus mr-3"></i> Ny prisliste
+                    <i class="fas fa-folder-plus mr-3"></i>Prislister
                   </div>
                 </div>
               </div>
@@ -283,8 +287,35 @@
           <div class="flex-inintial">
             <div
               class="w-10 h-10 bg-gray-900 text-center items-center flex justify-center rounded-full hover:bg-gray-800 cursor-pointer"
+              onClick="openKebab()"
             >
               <i class="fas fa-ellipsis-v text-xl text-gray-500"></i>
+            </div>
+          </div>
+          <div
+            class="absolute select-none mt-64 mr-6 text-black bg-white w-64 absolute right-0 rounded-lg shadow hidden"
+            id="isOpenKebab"
+          >
+            <div
+              class="w-full rounded-tl-md rounded-tr-md bg-white hover:bg-gray-200 border border-gray-300 cursor-pointer px-6 py-3"
+            >
+              <i class="fas fa-folder-plus mr-3"></i>Link 1
+            </div>
+            <div
+              class="w-full bg-white hover:bg-gray-200 border-l border-r border-b border-gray-300 cursor-pointer px-6 py-3"
+            >
+              <i class="fas fa-money-check-alt mr-3"></i>Link 2
+            </div>
+
+            <div
+              class="w-full bg-white hover:bg-gray-200 border-l border-r border-gray-300 cursor-pointer px-6 py-3"
+            >
+              <i class="fas fa-money-check-alt mr-3"></i>Link 3
+            </div>
+            <div
+              class="w-full rounded-bl-md rounded-br-md bg-white hover:bg-gray-200 border border-gray-300 cursor-pointer px-6 py-3"
+            >
+              <i class="fas fa-folder-plus mr-3"></i>Link 4
             </div>
           </div>
         </div>
@@ -297,9 +328,9 @@
 
     <div class="overflow-hidden pt-32 mb-12" onClick="closeAllMenus()">
       <div class="px-8 py-4 overflow-x-auto">
-        <div class="lg:flex lg:space-x-10">
+        <div class="xl:flex xl:space-x-10">
           <div
-            class="w-full lg:w-3/4 h-full inline-block shadow rounded-lg bg-gray-200 text-left text-xs text-gray-600 tracking-wider text-left"
+            class="w-full xl:w-3/4 h-full inline-block shadow rounded-lg bg-gray-200 text-left text-xs text-gray-600 tracking-wider text-left"
           >
             <div class="flex-1">
               <div class="rounded-tl-lg rounded-tr-lg">
@@ -310,8 +341,8 @@
                     Tilvirkningskost
                   </div>
                   <div class="p-5">
-                    <div class="flex space-x-5 items-start">
-                      <div class="w-1/2">
+                    <div class="lg:flex lg:space-x-5 items-start">
+                      <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
                         <div
                           class="px-6 py-3 rounded-tl rounded-tr bg-white text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
                         >
@@ -404,7 +435,7 @@
                           </tbody>
                         </table>
                       </div>
-                      <div class="w-1/2">
+                      <div class="w-full lg:w-1/2">
                         <div
                           class="px-6 py-3 rounded-tl rounded-tr bg-white text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
                         >
@@ -515,9 +546,9 @@
               </div>
             </div>
           </div>
-          <div class="block w-full lg:w-1/4">
+          <div class="block w-full xl:w-1/4">
             <div
-              class="mt-4 lg:mt-0 w-full inline-block shadow rounded-lg bg-gray-200 text-left text-xs text-gray-600 tracking-wider text-left"
+              class="mt-4 xl:mt-0 w-full inline-block shadow rounded-lg bg-gray-200 text-left text-xs text-gray-600 tracking-wider text-left"
             >
               <div class="flex-1">
                 <div
@@ -558,7 +589,7 @@
                   </div>
                 </div>
                 <div class="px-6 py-4">
-                  <div class="pt-4 lg:pt-0">
+                  <div class="pt-4 xl:pt-0">
                     <div class="font-semibold">
                       Andre kalkyler knyttet til dette produktet
                     </div>
@@ -591,7 +622,7 @@
                   </div>
                 </div>
                 <div class="px-6 py-4">
-                  <div class="pt-6 lg:pt-0">
+                  <div class="pt-6 xl:pt-0">
                     <div class="font-regular">
                       <div class="flex">
                         <div class="flex-1">Ansvarlig Marked</div>
@@ -684,7 +715,7 @@
                   </div>
                 </div>
                 <div class="px-6 py-4">
-                  <div class="pt-6 lg:pt-0">
+                  <div class="pt-6 xl:pt-0">
                     <div class="font-regular">
                       <div class="flex-1">Tilvirkningskost</div>
 

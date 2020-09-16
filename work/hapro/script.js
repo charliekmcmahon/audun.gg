@@ -10,7 +10,6 @@ let errorMessages = [
       "Baking av PCB - Does not have a price group : Se 'bug' for mer informasjon.",
   },
 ];
-
 /*
 kan ikke lukke error
 hvert trykk gir ikke flere error, forsåvidt
@@ -46,18 +45,43 @@ function newCalculus() {
 function closeCalculus() {
   calculus.classList.add('hidden');
 }
+const kebab = document.getElementById('isOpenKebab');
 const admin = document.getElementById('isOpenAdmin');
 const tilbud = document.getElementById('isOpenTilbud');
+function openKebab() {
+  kebab.classList.toggle('hidden');
+  admin.classList.add('hidden');
+  tilbud.classList.add('hidden');
+}
 function openTilbud() {
   tilbud.classList.toggle('hidden');
   admin.classList.add('hidden');
+  kebab.classList.add('hidden');
 }
 function openAdmin() {
   admin.classList.toggle('hidden');
   tilbud.classList.add('hidden');
+  kebab.classList.add('hidden');
 }
 
 function closeAllMenus() {
   admin.classList.add('hidden');
   tilbud.classList.add('hidden');
+}
+
+const calcElem = document.getElementsByClassName('baking');
+
+let posts = [];
+function addCalc(num) {
+  posts.push(calcElem);
+  document.querySelector('.nåverende').innerHTML = posts.join('');
+}
+
+function moveMe() {
+  addCalc();
+  if ((calcElem.classList = 'block')) {
+    calcElem.classList.add = 'hidden';
+  } else {
+    console.log('nja');
+  }
 }
