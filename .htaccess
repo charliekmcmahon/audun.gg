@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^audun.gg$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.audun.gg$
+RewriteCond %{REQUEST_URI} !wwwroot/
+RewriteRule (.*) /wwwroot/$1 [L]
